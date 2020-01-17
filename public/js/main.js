@@ -458,11 +458,14 @@ $(function() {
 
 let messageFrom = this.document.querySelector('form');
 let name = document.querySelector('#name');
-let message = document.querySelector('#message');
 let email = document.querySelector('#email');
+let message = document.querySelector('#message');
+let url = document.querySelector('#url');
 let phone = document.querySelector('#phone');
 
 messageFrom.addEventListener('submit', (e) => {
+
+
 	fetch('/writePost', {
 		method: 'POST',
 		headers: {
@@ -470,10 +473,11 @@ messageFrom.addEventListener('submit', (e) => {
 		},
 		body: JSON.stringify(
 			{
-				name: name.value,
-				message: message.value,
+				name: name.value,			
 				email: email.value,
-				phone: phone.value
+				url: url.value,
+				message: message.value,
+
 			}
 		)
 	});

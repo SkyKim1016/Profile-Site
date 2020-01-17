@@ -7,12 +7,16 @@ router.get('/', (req, res) => res.render('index', {
     phone:'(+82) 010 - 5843 - 8814'
 }))
 
-router.get('/single', async(req, res) => {
+router.get('/guestBook', async(req, res) => {
     const guestBookObject = await GuestBook.find({})
-    console.log(chalk.blue(guestBookObject))
+    // console.log(chalk.blue(guestBookObject))
     
-    res.render('single', {
-        phone:''
+    guestBookObjectDatas = JSON.stringify(guestBookObject)
+    console.log(chalk.blue(guestBookObject))
+
+    res.render('guestBook', {
+        guestBookObject : guestBookObject
+        
     })
 })
 

@@ -10,11 +10,17 @@ const GuestBookSchema = mongoose.Schema(
     },
     email:{
         type: String,
-        trim: true
+        trim: true,
     },
     phone:{
         type: String,
-        trim: true
+        trim: true,
+        required: false
+    },
+    url:{
+        type: String,
+        trim: true,
+        required: false
     },
     message: {
         type: String,
