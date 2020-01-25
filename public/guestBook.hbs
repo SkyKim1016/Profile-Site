@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ronaldo - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Sky's profile site</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -27,7 +27,7 @@
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html"><span>R</span>onaldo</a>
+	      <a class="navbar-brand" href="index.html"><span>SKY</span></a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -51,7 +51,7 @@
         <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
           <div class="col-lg-10 ftco-animate d-flex align-items-center">
           	<div class="text text-center">
-          		<h1 class="mb-3 bread">Blog Single Post</h1>
+          		<h1 class="mb-3 bread">Guest Book Post</h1>
 	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.html">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single <i class="ion-ios-arrow-forward"></i></span></p>
             </div>
           </div>
@@ -108,12 +108,13 @@
                   </div>
                   <div class="comment-body">
                     <h3>{{ this.name }}  </h3>
-                    <div class="meta">Sept. 12, 2019 at 2:21pm</div>
+                    <div class="meta">{{ post_date}}</div>
                     <p> {{this.message}} </p>
                     <p><a href="#" class="reply">Reply</a></p>
                   </div>
                 </li>
                 {{/each}}
+                
                 <li class="comment">
                   <div class="vcard bio">
                     <img src="images/person_1.jpg" alt="Image placeholder">
@@ -310,6 +311,7 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+  <script src="js/guestBook.js"></script>
     
   </body>
 </html>

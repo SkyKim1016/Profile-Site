@@ -185,7 +185,7 @@
 				$('.number').each(function(){
 					var $this = $(this),
 						num = $this.data('number');
-						console.log(num);
+						// console.log(num);
 					$this.animateNumber(
 					  {
 					    number: num,
@@ -352,8 +352,8 @@ window.onload = function() {
     var toRotate = elements2[i].getAttribute('data-rotate');
     var period = elements2[i].getAttribute('data-period');
     if (toRotate) {
-		console.log('toRotate: ',toRotate),
-	  console.log('period: ',period)
+	// 	console.log('toRotate: ',toRotate),
+	//   console.log('period: ',period)
 	  new TxtRotate(elements2[i], JSON.parse(toRotate), period);
 	  
     }
@@ -456,31 +456,98 @@ $(function() {
 
 
 
-let messageFrom = this.document.querySelector('form');
-let name = document.querySelector('#name');
-let email = document.querySelector('#email');
-let message = document.querySelector('#message');
-let url = document.querySelector('#url');
-let phone = document.querySelector('#phone');
 
-messageFrom.addEventListener('submit', (e) => {
+hideChat(0);
+
+$('#prime').click(function() {
+  toggleFab();
+});
 
 
-	fetch('/writePost', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(
-			{
-				name: name.value,			
-				email: email.value,
-				url: url.value,
-				message: message.value,
+//Toggle chat and links
+function toggleFab() {
+  $('.prime').toggleClass('zmdi-comment-outline');
+  $('.prime').toggleClass('zmdi-close');
+  $('.prime').toggleClass('is-active');
+  $('.prime').toggleClass('is-visible');
+  $('#prime').toggleClass('is-float');
+  $('.chat').toggleClass('is-visible');
+  $('.fab').toggleClass('is-visible');
+  
+}
 
-			}
-		)
-	});
+  $('#chat_first_screen').click(function(e) {
+        hideChat(1);
+  });
 
-	alert("등록이 완료 되었습니다 \n"+"name.value : "+name.value+"\n message.value : " + message.value);
-})
+  $('#chat_second_screen').click(function(e) {
+        hideChat(2);
+  });
+
+  $('#chat_third_screen').click(function(e) {
+        hideChat(3);
+  });
+
+  $('#chat_fourth_screen').click(function(e) {
+        hideChat(4);
+  });
+
+  $('#chat_fullscreen_loader').click(function(e) {
+      $('.fullscreen').toggleClass('zmdi-window-maximize');
+      $('.fullscreen').toggleClass('zmdi-window-restore');
+      $('.chat').toggleClass('chat_fullscreen');
+      $('.fab').toggleClass('is-hide');
+      $('.header_img').toggleClass('change_img');
+      $('.img_container').toggleClass('change_img');
+      $('.chat_header').toggleClass('chat_header2');
+      $('.fab_field').toggleClass('fab_field2');
+      $('.chat_converse').toggleClass('chat_converse2');
+      //$('#chat_converse').css('display', 'none');
+     // $('#chat_body').css('display', 'none');
+     // $('#chat_form').css('display', 'none');
+     // $('.chat_login').css('display', 'none');
+     // $('#chat_fullscreen').css('display', 'block');
+  });
+
+function hideChat(hide) {
+    switch (hide) {
+      case 0:
+            $('#chat_converse').css('display', 'none');
+            $('#chat_body').css('display', 'none');
+            $('#chat_form').css('display', 'none');
+            $('.chat_login').css('display', 'block');
+            $('.chat_fullscreen_loader').css('display', 'none');
+             $('#chat_fullscreen').css('display', 'none');
+            break;
+      case 1:
+            $('#chat_converse').css('display', 'block');
+            $('#chat_body').css('display', 'none');
+            $('#chat_form').css('display', 'none');
+            $('.chat_login').css('display', 'none');
+            $('.chat_fullscreen_loader').css('display', 'block');
+            break;
+      case 2:
+            $('#chat_converse').css('display', 'none');
+            $('#chat_body').css('display', 'block');
+            $('#chat_form').css('display', 'none');
+            $('.chat_login').css('display', 'none');
+            $('.chat_fullscreen_loader').css('display', 'block');
+            break;
+      case 3:
+            $('#chat_converse').css('display', 'none');
+            $('#chat_body').css('display', 'none');
+            $('#chat_form').css('display', 'block');
+            $('.chat_login').css('display', 'none');
+            $('.chat_fullscreen_loader').css('display', 'block');
+            break;
+      case 4:
+            $('#chat_converse').css('display', 'none');
+            $('#chat_body').css('display', 'none');
+            $('#chat_form').css('display', 'none');
+            $('.chat_login').css('display', 'none');
+            $('.chat_fullscreen_loader').css('display', 'block');
+            $('#chat_fullscreen').css('display', 'block');
+            break;
+    }
+}
+

@@ -1,5 +1,11 @@
 const mongoose = require('mongoose')
-// const validator = require('validator')
+const validator = require('validator')
+
+//For example
+// mongoose.connect('mongodb:127.0.0.1:27017/dbname,', {
+//     useNewUrlParser:true,
+//      
+// })
 
 const GuestBookSchema = mongoose.Schema(
 {
@@ -11,13 +17,25 @@ const GuestBookSchema = mongoose.Schema(
     email:{
         type: String,
         trim: true,
+        lowcase:true,
+        // validate(value){
+        //     if(!validator.isEmail(value)){
+        //         throw new Error(' Email is invalid')
+        //     }
+        // }
     },
     phone:{
         type: String,
         trim: true,
-        required: false
+        required: false,
+        //If this filed is number then could be validate filtering function such as below 
+        //validate(value) {
+            // if( value < 0 ){
+            //     throw new Error ('value must be a postive number')
+            // }
+       // }
     },
-    url:{
+    web_url:{
         type: String,
         trim: true,
         required: false
@@ -28,6 +46,10 @@ const GuestBookSchema = mongoose.Schema(
         required: true,
         trim: true
     },
+    post_date:{
+        type: Date, 
+        default: Date.now
+    }
     
 })
 

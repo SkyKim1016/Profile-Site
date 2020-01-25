@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Sky's Site</title>
+	<title>Sky's profile site</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -22,9 +22,62 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://kit.fontawesome.com/cb79701df1.js" crossorigin="anonymous"></script>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+	<!--Botoom Floating Chatting  -->
+	{{!-- <div style="position:fixed; right: 10px; bottom: 50px; z-index:999;">
+		<div id="messages"> 
+
+		</div>
+		<form id="message-form">
+			<input id="message-input" placeholder="Message">
+			<button id="message-button"> Send </button>
+			<button id="send-location"> Send My Location </button>
+		</form>
+	</div> --}}
+	<!-- -->
+
+	<div class="fabs">
+		<div class="chat">
+			<div class="chat_header">
+				<div class="chat_option">
+					<div class="header_img">
+						<img src="images/personal.jpg" />
+					</div>
+					<span id="chat_head">Sky </span> <span class="offline">(Offline) </span>
+					<span id="chat_fullscreen_loader" class="chat_fullscreen_loader"><i class="far fa-window-restore" style="margin:15px 5px"></i></span>
+				</div>
+			</div>
+			<div class="chat_body chat_login">
+				<a id="chat_first_screen" class="fab"><i class="fas fa-sign-in-alt" style="color:rgb(68, 68, 68);"></i></a>
+				<p>Enter to chat message room </p>
+			</div>
+			<div id="chat_converse" class="chat_conversion chat_converse">
+				{{!-- <a id="chat_second_screen" class="fab"><i class="zmdi zmdi-arrow-right"></i></a> --}}
+				<span class="chat_msg_item chat_msg_item_admin">
+					<div class="chat_avatar">
+						<img src="images/personal.jpg" />
+					</div>Hey there! Please leave message at here. I will have check your message when I come to here
+				</span>
+			</div>
+			<div class="fab_field">
+				<form id="message-form">
+					<a id="fab_map" class="fab"><i class="fas fa-map-marked-alt"></i></a>
+					<a id="fab_send" class="fab"><i class="far fa-paper-plane"></i></a>
+					<textarea id="chatSend" name="chat_message" placeholder="Send a message"
+						class="chat_field chat_message"></textarea>
+				</form>
+			</div>
+		</div>
+		<a id="prime" class="fab"><i class="far fa-comment-dots" style="color:rgb(68, 68, 68);"></i></a>
+	</div>
+
+
+	<!-- -->
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 		<div class="container">
@@ -41,7 +94,7 @@
 					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 					<li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
 					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-					<li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
+					<li class="nav-item"><a href="#guestbook-section" class="nav-link"><span>Guest Book</span></a></li>
 					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 				</ul>
 			</div>
@@ -75,6 +128,7 @@
 		</div>
 	</section>
 
+
 	<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
 		<div class="container">
 			<div class="row d-flex no-gutters">
@@ -82,7 +136,7 @@
 					<div class="img-about img d-flex align-items-stretch">
 						<div class="overlay"></div>
 						<div class="img d-flex align-self-stretch align-items-center"
-							style="background-image:url(images/personal.jpg);">
+							style="background-image:url(images/personal.jpg); border-radius: 10%; ">
 						</div>
 					</div>
 				</div>
@@ -91,22 +145,22 @@
 						<div class="col-md-12 heading-section ftco-animate">
 							<h1 class="big">About</h1>
 							<h2 class="mb-4">About Me</h2>
-							<p>A small river named Duden flows by their place and supplies it with the necessary
-								regelialia.</p>
+							<p>Hello. Thank you to come to my website. </br>
+								I am a fullstack developer who can handling and developmenting back-end programs which are  Node.JS and Express and MongoDB and front-end programs which are React and React Native for making business website and smartphone app to globaly. </p>
 							<ul class="about-info mt-4 px-md-0 px-2">
-								<li class="d-flex"><span>Name:</span> <span>Ronaldo Fredrickson</span></li>
-								<li class="d-flex"><span>Date of birth:</span> <span>November 28, 1989</span></li>
-								<li class="d-flex"><span>Address:</span> <span>San Francisco CA 97987 USA</span></li>
+								<li class="d-flex"><span>Name:</span> <span>SKY HANEL KIM</span></li>
+								<li class="d-flex"><span>Date of birth:</span> <span>October 16, 1988</span></li>
+								<li class="d-flex"><span>Address:</span> <span>Seoul, Korea</span></li>
 								<li class="d-flex"><span>Zip code:</span> <span>1000</span></li>
-								<li class="d-flex"><span>Email:</span> <span>ronaldo@gmail.com</span></li>
-								<li class="d-flex"><span>Phone: </span> <span>{{phone}}</span></li>
+								<li class="d-flex"><span>Email:</span> <span>Skykim1016@Gmail.com</span></li>
+								<li class="d-flex"><span>Phone: </span> <span>(+82) 010-5843-8814</span></li>
 							</ul>
 						</div>
 					</div>
 					<div class="counter-wrap ftco-animate d-flex mt-md-3">
 						<div class="text">
 							<p class="mb-4">
-								<span class="number" data-number="120">0</span>
+								<span class="number" data-number="10">0</span>
 								<span>Project complete</span>
 							</p>
 							<p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
@@ -121,25 +175,29 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm ftco-animate">
-					<a href="#" class="partner"><img src="images/partner-1.png" class="img-fluid"
+					<a href="#" class="partner"><img src="data:image/png;base64,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" class="img-fluid"
 							alt="Colorlib Template"></a>
 				</div>
 				<div class="col-sm ftco-animate">
-					<a href="#" class="partner"><img src="images/partner-2.png" class="img-fluid"
+					<a href="#" class="partner"><img src="data:image/png;base64,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" class="img-fluid"
 							alt="Colorlib Template"></a>
 				</div>
 				<div class="col-sm ftco-animate">
-					<a href="#" class="partner"><img src="images/partner-3.png" class="img-fluid"
+					<a href="#" class="partner"><img src="https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png" class="img-fluid"
 							alt="Colorlib Template"></a>
 				</div>
 				<div class="col-sm ftco-animate">
-					<a href="#" class="partner"><img src="images/partner-4.png" class="img-fluid"
+					<a href="#" class="partner"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tHE3mG0KU8vozgzBls12IX0DcnWdrPXBWoMVglnOHmjQa4vs&s" class="img-fluid"
 							alt="Colorlib Template"></a>
 				</div>
 				<div class="col-sm ftco-animate">
-					<a href="#" class="partner"><img src="images/partner-5.png" class="img-fluid"
+					<a href="#" class="partner"><img src="https://sites.google.com/site/dekchysite95/_/rsrc/1480944463347/extra-credit/google.png" class="img-fluid"
 							alt="Colorlib Template"></a>
 				</div>
+				{{!-- <div class="col-sm ftco-animate">
+					<a href="#" class="partner"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAACMCAMAAABmmcPHAAAAMFBMVEX////LODfLNzbIJiTIIB7IIyHKMC/LNDPJLCvHFhTLNTTLMS/IHRvHDgvKKijHFBJ+oaUIAAACiUlEQVR4nO3dy3LiMBhEYSGIIXIu7/+2iaq84m9VyZHcJOSctWfU+mp2HiCdyFJ69ID/EtCmgDYFtCmgTQFtCmhTQJsC2hTQpoA2BbQpoE0BbQpoU0CbAtqUhM6Te5YzRrYo6HyeXIlnlNlniNtNv8fAFgWdX9LkcpDOZfYZL+F2+Tb7jJ9vMUGXCH2dfQbQCWigDwpoU0CbAtoU0KaANgW0KaBNAW0KaFNAmwLaFNCmgDYFtCmgTQFtajr0ui53rYt6bgT67f6IZXnvu1w/9DXcY5H7bnHLR9+WQehruX/RXuRL1xHoSzgjf/Zdrh+6dN5jic/JM+ZDh79wPrQY/dr3XD90fEtfsnou3lefAXQjoPVooIFubga6BrQeDTTQzc1A14DWo4EGurkZ6BrQejTQQDc3A10DWo8GGujmZqBrQOvRQAPd3Ax0DWg9Gmigm5uBrgGtRwMNdHMz0DWg9WiggW5uBroGtB4NNNDNzUDXgNajgQa6uRnoGtB6NNBHQF9KaPqHhYCuo+OnsvgXfQR0b0AnoIHeAnpHQCeggd4CekdAJ6CB3gJ6R0AnoIHeAnpHQCeggd4CekdAJ6CB3gJ6R08NXSK0HCh+Zu9XQZ8i9Ek9J6DXvi2NH46MX8GpC/u+F/Y9t+O7SeP3hsrE3Qz30M+JLWM/hdr7Z8VTI99NOrRl7j36n3vQj/sO/QeaPxnQpoA2BbQpoE0BbQpoU0CbAtoU0KaANgW0KaBNAW0KaFNAmwLaVLocn7DK8iVuL7Rh8/R67zvULWKVc2fCWX6gk5KEHnmfB3QrBT0Q0K2ANgW0KaBNAW0KaFNAmwLaFNCmgDYFtCmgTQFtCmhTQJsC2hTQpoBO6QvdiZUjLNbAggAAAABJRU5ErkJggg==" class="img-fluid"
+							alt="Colorlib Template"></a>
+				</div> --}}
 			</div>
 		</div>
 	</section>
@@ -300,7 +358,7 @@
 						<div class="row progress-circle mb-5">
 							<div class="col-lg-4 mb-4">
 								<div class="bg-white rounded-lg shadow p-4">
-									<h2 class="h5 font-weight-bold text-center mb-4">CSS</h2>
+									<h2 class="h5 font-weight-bold text-center mb-4">NODE.JS</h2>
 
 									<!-- Progress bar 1 -->
 									<div class="progress mx-auto" data-value='90'>
@@ -334,7 +392,7 @@
 
 							<div class="col-lg-4 mb-4">
 								<div class="bg-white rounded-lg shadow p-4">
-									<h2 class="h5 font-weight-bold text-center mb-4">HTML</h2>
+									<h2 class="h5 font-weight-bold text-center mb-4">REACT</h2>
 
 									<!-- Progress bar 1 -->
 									<div class="progress mx-auto" data-value='80'>
@@ -368,7 +426,7 @@
 
 							<div class="col-lg-4 mb-4">
 								<div class="bg-white rounded-lg shadow p-4">
-									<h2 class="h5 font-weight-bold text-center mb-4">jQuery</h2>
+									<h2 class="h5 font-weight-bold text-center mb-4">REACT NATIVE</h2>
 
 									<!-- Progress bar 1 -->
 									<div class="progress mx-auto" data-value='75'>
@@ -539,6 +597,33 @@
 				</div>
 			</div>
 			<div class="row">
+
+				<div class="col-md-4 text-center d-flex ftco-animate">
+					<a href="#" class="services-1 shadow">
+						<span class="icon">
+							<i class="fab fa-android"></i>
+						</span>
+						<div class="desc">
+							<h3 class="mb-5">App Developing</h3>
+							<p>A small river named Duden flows by their place and supplies it with the necessary
+								regelialia.</p>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 text-center d-flex ftco-animate">
+					<a href="#" class="services-1 shadow">
+						<span class="icon">
+							<i class="flaticon-ideas"></i>
+						</span>
+						<div class="desc">
+							<h3 class="mb-5">Web Developer</h3>
+							<p>A small river named Duden flows by their place and supplies it with the necessary
+								regelialia.</p>
+						</div>
+					</a>
+				</div>
+
 				<div class="col-md-4 text-center d-flex ftco-animate">
 					<a href="#" class="services-1 shadow">
 						<span class="icon">
@@ -558,31 +643,6 @@
 						</span>
 						<div class="desc">
 							<h3 class="mb-5">Phtography</h3>
-							<p>A small river named Duden flows by their place and supplies it with the necessary
-								regelialia.</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1 shadow">
-						<span class="icon">
-							<i class="flaticon-ideas"></i>
-						</span>
-						<div class="desc">
-							<h3 class="mb-5">Web Developer</h3>
-							<p>A small river named Duden flows by their place and supplies it with the necessary
-								regelialia.</p>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1 shadow">
-						<span class="icon">
-							<i class="flaticon-innovation"></i>
-						</span>
-						<div class="desc">
-							<h3 class="mb-5">App Developing</h3>
 							<p>A small river named Duden flows by their place and supplies it with the necessary
 								regelialia.</p>
 						</div>
@@ -732,19 +792,93 @@
 	</section>
 
 
-	<section class="ftco-section" id="blog-section">
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box text-center p-4 shadow">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<div>
+							<h3 class="mb-4">Address</h3>
+							<p>198 West 21th Street, Suite 721 New York NY 10016</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box text-center p-4 shadow">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<div>
+							<h3 class="mb-4">Contact Number</h3>
+							<p><a href="tel://+821058438814">+82 10 5843 8814</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box text-center p-4 shadow">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<div>
+							<h3 class="mb-4">Email Address</h3>
+							<p><a href="mailto:Skykim1016@Gmail.com">Skykim1016@Gmail.com </a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box text-center p-4 shadow">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<div>
+							<h3 class="mb-4">Website</h3>
+							<p><a href="#">yoursite.com</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-hireme img" style="background-image: url(images/image_3.jpg)">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>I'm <span>Available</span> for freelancing</h2>
+					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+					<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="ftco-section" id="guestbook-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Blog</h1>
-					<h2 class="mb-4">Our Blog</h2>
+					<h1 class="big big-2">Guest Book</h1>
+					<h2 class="mb-4">Guest Book</h2>
 					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
 				</div>
 			</div>
 			<div class="row d-flex">
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+						<a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg'); ">
 						</a>
 						<div class="text mt-3 float-right d-block">
 							<h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a>
@@ -801,78 +935,8 @@
 				</div>
 			</div>
 		</div>
-	</section>
 
-	<section class="ftco-section ftco-hireme img" style="background-image: url(images/image_3.jpg)">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>I'm <span>Available</span> for freelancing</h2>
-					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-					<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-3">
-				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Contact</h1>
-					<h2 class="mb-4">Contact Me</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-				</div>
-			</div>
-
-			<div class="row d-flex contact-info mb-5">
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box text-center p-4 shadow">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-map-signs"></span>
-						</div>
-						<div>
-							<h3 class="mb-4">Address</h3>
-							<p>198 West 21th Street, Suite 721 New York NY 10016</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box text-center p-4 shadow">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-phone2"></span>
-						</div>
-						<div>
-							<h3 class="mb-4">Contact Number</h3>
-							<p><a href="tel://1234567920">+ 1235 2355 98</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box text-center p-4 shadow">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-paper-plane"></span>
-						</div>
-						<div>
-							<h3 class="mb-4">Email Address</h3>
-							<p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box text-center p-4 shadow">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-globe"></span>
-						</div>
-						<div>
-							<h3 class="mb-4">Website</h3>
-							<p><a href="#">yoursite.com</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</section>
 
 	{{>footer}}
@@ -899,6 +963,14 @@
 	<script src="js/scrollax.min.js"></script>
 
 	<script src="js/main.js"></script>
+
+	<!-- For Socket Chatting -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+	<script src="socket.io/socket.io.js"></script>
+	<script src="js/chat.js"></script>
+	<!-- For Socket Chatting -->
+
 
 </body>
 
