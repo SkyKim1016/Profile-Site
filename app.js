@@ -67,30 +67,43 @@ io.on('connection', (socket) => {
 
     // socket.emit('Message', generateMessage('Welcome!'))
 
-    socket.broadcast.emit("Message", generateMessage(' A new user has joined') )
+    socket.broadcast.emit("Message", {
+        'message' : ' A new user has come to my site',
+        createdAt : new Date().getTime(),
+        'userType': 'host' 
+    }) 
 
-    socket.on('sendMessage', (message, callback) => {
+    socket.on('sendMessage', (datas, callback) => {
         const filter = new Filter()
 
-        if(filter.isProfane(message)){
+        if(filter.isProfane(datas.message)){
             return callback('Profanity is not allowed!')
         }
 
-        // Socket.emit = send to spectied connection
+        // Socket.emit = send to spectied connection 
         // Io.emit Send to every connection 
-        io.emit('Message',generateMessage(message)) 
+  
+        io.emit('Message',{
+            message:datas.message,
+            createdAt : new Date().getTime(),
+            userType:datas.userType
+        }) 
         callback() //Calback to client which is chat.js to error argument
       
     })
 
-    socket.on('sendLocation', (coords, callback) => {
-        io.emit('locationMessage', generateLocationMessage(`https://google.com/maps?q=${coords.latitude},${coords.longitude}&output=embed`) )
-        
+    socket.on('sendLocation', (datas, callback) => {
+        io.emit('locationMessage', {
+            url : `https://google.com/maps?q=${datas.latitude},${datas.longitude}&output=embed`,
+            createdAt : new Date().getTime(),
+            userType:datas.userType
+        })
         callback()
     })
 
     socket.on('disconnect', () => {
-        io.emit('Message', generateMessage('A user has left!'))
+        let datas = { 'message' : 'A new user has left my site.' , 'userType': 'host' , 'createdAt' : new Date().getTime() }
+        io.emit('Message', datas )
     })
 })
 

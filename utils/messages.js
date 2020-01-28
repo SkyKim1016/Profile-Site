@@ -1,7 +1,12 @@
-const generateMessage = (text) => {
+const generateMessage = (datas) => {
+    
+    datas.createdAt = new Date().getTime()
+    console.log('Utility : ',datas)
+
     return{
-        text,
-        createdAt : new Date().getTime()
+        // message,
+        // createdAt : new Date().getTime()
+        datas
     }
 }
 
