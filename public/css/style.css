@@ -10473,3 +10473,49 @@ textarea.form-control {
     :-moz-placeholder { /* Firefox 4 - 18 */
       color: #bbb;
     }
+
+
+
+
+#myVideo {
+  /* position: fixed; */
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100; 
+  min-height: 100%;
+  z-index: 1;
+}
+
+.content {
+  /* position: fixed; */
+  position: relative;
+  margin-top: -250px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  z-index: 9999;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+.video-section {
+  align:center;
+  align-items: center;
+  align-content: center;
+}
