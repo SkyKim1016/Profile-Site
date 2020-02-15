@@ -6,7 +6,6 @@ const chalk = require('chalk');
 router.get('/', (req, res) => {
 
     res.render('index', {
-        visitorCounter
     })
 
 })
