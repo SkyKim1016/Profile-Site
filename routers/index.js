@@ -3,9 +3,12 @@ const GuestBook = require('../models/guestBook')
 const router = new express.Router();
 const chalk = require('chalk');
 
+let viewCount = 0
 router.get('/', (req, res) => {
+    ++viewCount;
 
     res.render('index', {
+        viewCount
     })
 
 })
