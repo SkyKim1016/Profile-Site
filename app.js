@@ -1,7 +1,9 @@
 const path = require('path');
 const http = require('http'); //For Socket IO Chatting
 const express = require('express');
-const hbs = require('hbs');
+// const hbs = require('hbs');
+const ejs         = require('ejs');
+
 const chalk = require('chalk');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
@@ -22,13 +24,12 @@ const io = socketio(server)
 const port = process.env.PORT || 3000;
 const publicDirectoryPath = path.join(__dirname, '/public/')
 
-let count = 0
-
+// [ CONFIGURE .ejs view engine ]
 app.use(express.static(publicDirectoryPath))
-    .set('views', publicDirectoryPath) //Setup handlebars engine and views location
-    .set('view engine', 'hbs')
+    .set('views', publicDirectoryPath) //Setup view engine and views location
+    .set('view engine', 'ejs')
 
-hbs.registerPartials(publicDirectoryPath+'/partials')
+// hbs.registerPartials(publicDirectoryPath+'/partials')
 
 
 
